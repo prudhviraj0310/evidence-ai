@@ -1,0 +1,65 @@
+{
+  "evidenceId": "EV-006",
+  "summary": "CCTV footage from a parking garage, labeled 'south garage', on March 14, 2017, at approximately 00:25 AM. The video shows a black Jeep driving through the garage and exiting the frame. Several other vehicles are parked in the background.",
+  "extractedEntities": {
+    "persons": [],
+    "locations": [
+      "south garage"
+    ],
+    "timestamps": [
+      "2017-03-14 00:25:39",
+      "2017-03-14 00:25:40",
+      "2017-03-14 00:25:41",
+      "2017-03-14 00:25:42",
+      "2017-03-14 00:25:43",
+      "2017-03-14 00:25:44",
+      "2017-03-14 00:25:45",
+      "2017-03-14 00:25:46",
+      "2017-03-14 00:25:47",
+      "2017-03-14 00:25:48",
+      "2017-03-14 00:25:49",
+      "2017-03-14 00:25:50",
+      "2017-03-14 00:25:51",
+      "2017-03-14 00:25:52",
+      "2017-03-14 00:25:53",
+      "2017-03-14 00:25:54",
+      "2017-03-14 00:25:55",
+      "2017-03-14 00:25:56"
+    ],
+    "phoneNumbers": [],
+    "vehicles": [
+      "Black Jeep Wrangler (or similar dark-colored SUV) driving with headlights on, license plate not clearly visible.",
+      "Silver SUV, parked, partial license plate '018 57' visible.",
+      "Gold/beige sedan, parked, license plate not clearly visible.",
+      "Silver sedan, parked, partial license plate 'NJ' visible.",
+      "Dark-colored sedan, parked.",
+      "Light-colored older SUV/truck, partially visible, parked."
+    ],
+    "keywords": [
+      "CCTV",
+      "parking garage",
+      "vehicle movement",
+      "Jeep",
+      "early morning",
+      "parked cars"
+    ]
+  },
+  "threatLevel": "low",
+  "suspicionScore": 10,
+  "findings": [
+    "The video was recorded on March 14, 2017, between 00:25:39 and 00:25:56.",
+    "The footage is from a location identified as 'south garage'.",
+    "A black Jeep, likely a Wrangler model, drives from the left to the right side of the frame with its headlights on, indicating it is moving through the garage, possibly towards an exit.",
+    "Multiple other vehicles are parked in the garage, including a silver SUV with a partial license plate '018 57' and a silver sedan with a partial license plate 'NJ'."
+  ],
+  "contradictions": [],
+  "metadata": {
+    "language": "English",
+    "contentType": "cctv",
+    "authenticity": "appears_genuine"
+  },
+  "fileName": "CCTV_ParkingB2_Camera01_Exit.mp4",
+  "fileType": "video/mp4",
+  "uploadedAt": "2026-05-14T08:10:47.106Z",
+  "status": "analyzed"
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "APEX-IND-773",
+  "title": "Operation Red Sky",
+  "narrative": "Evidence strongly suggests Arjun Sharma discovered corporate embezzlement by Rajesh Singhania. Arjun attempted to flee with the Quantum Server source code but was intercepted by head of security Priya Desai and unknown accomplices near Outer Ring Road. Arjun's current location is unknown, but evidence implies corporate espionage and possible foul play coordinated by Singhania.",
+  "overallSuspicionScore": 98,
+  "threatLevel": "CRITICAL",
+  "status": "ACTIVE",
+  "suspects": [
+    {
+      "name": "Rajesh Singhania",
+      "status": "Primary Suspect",
+      "risk": 95
+    },
+    {
+      "name": "Priya Desai",
+      "status": "Person of Interest",
+      "risk": 88
+    },
+    {
+      "name": "Unknown SUV Driver",
+      "status": "Accomplice",
+      "risk": 75
+    }
+  ],
+  "keyFindings": [
+    "Singhania's alibi is verifiably false.",
+    "Desai's phone communicated with a burner at the crime scene.",
+    "Arjun downloaded 200MB of restricted data before vanishing.",
+    "CCTV driver does not match Arjun's physical profile."
+  ],
+  "recommendation": "Immediately detain Priya Desai for questioning and subpoena Apex Pharmaceuticals server logs."
+}

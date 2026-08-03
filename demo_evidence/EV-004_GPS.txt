@@ -1,0 +1,14 @@
+GPS TELEMETRY DATA - ELIAS VANCE VEHICLE (QX7-992)
+Date: October 14, 2026 - October 15, 2026
+
+[22:06:30] GPS Location: Nexus BioTech Underground Parking (Speed: 15 mph)
+[22:15:45] GPS Location: Interstate 80 Westbound (Speed: 75 mph)
+[22:40:12] GPS Location: Exiting I-80 at Route 9 (Speed: 45 mph)
+[22:55:00] GPS Location: Route 9, Mile Marker 12 (Speed: 0 mph) - Vehicle Stopped.
+[23:05:00] EVENT TRIGGER: Driver-side door opened.
+[23:05:15] EVENT TRIGGER: Driver-side door closed.
+[01:12:00] EVENT TRIGGER: Engine idling detected. Fuel level: 30%.
+[06:30:00] GPS Location: Route 9, Mile Marker 12 (Speed: 0 mph) - Vehicle found by State Patrol. Engine running, door locked, driver missing.
+
+ADDITIONAL METADATA:
+At [22:55:00], a second unassigned cell phone pinged the Route 9 cell tower simultaneously with Vance's vehicle stop. The number belongs to a burner phone purchased on October 12, 2026.

@@ -1,0 +1,46 @@
+{
+  "evidenceId": "EV-001",
+  "summary": "The CCTV footage from 'Parking 1' shows a dark grey sedan entering the frame, driving through an underground parking garage, and turning right to exit the camera's view. Several parked vehicles are also visible.",
+  "extractedEntities": {
+    "persons": [],
+    "locations": [
+      "Parking 1 (underground parking garage)"
+    ],
+    "timestamps": [
+      "2019-12-25 09:38:10 AM",
+      "2019-12-25 09:38:19 AM"
+    ],
+    "phoneNumbers": [],
+    "vehicles": [
+      "Dark grey sedan (possibly a Toyota Corolla or similar model), with headlights on. It has a partially visible New Jersey license plate (first characters appear to be 'S7' or 'S9').",
+      "Blue SUV (parked on the left, possibly a Mitsubishi Outlander Sport).",
+      "White SUV/car (parked on the left, next to the blue SUV)."
+    ],
+    "keywords": [
+      "parking garage",
+      "sedan",
+      "SUV",
+      "New Jersey license plate",
+      "driving",
+      "Christmas Day"
+    ]
+  },
+  "threatLevel": "low",
+  "suspicionScore": 10,
+  "findings": [
+    "A dark grey sedan is observed driving through the underground parking garage ('Parking 1') at approximately 09:38 AM on December 25, 2019.",
+    "The sedan has its headlights illuminated and makes a right turn to exit the camera's field of view.",
+    "The sedan features a New Jersey license plate, with the initial characters appearing to be 'S7' or 'S9', though the full plate is not clearly legible.",
+    "Two other vehicles, a blue SUV and a white SUV/car, are parked on the left side of the frame and remain stationary throughout the footage."
+  ],
+  "contradictions": [],
+  "metadata": {
+    "language": "N/A",
+    "contentType": "cctv",
+    "authenticity": "appears_genuine"
+  },
+  "fileName": "CCTV_ParkingB2_Camera04.mp4",
+  "fileType": "video/mp4",
+  "uploadedAt": "2026-05-14T08:55:00.119Z",
+  "status": "analyzed"
+}

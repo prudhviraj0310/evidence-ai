@@ -1,0 +1,52 @@
+{
+  "timeline": [
+    {
+      "id": "t1",
+      "date": "Oct 14",
+      "time": "19:15",
+      "title": "Priya Desai calls Rajesh Singhania",
+      "description": "Call duration 1:45. Pings near Bangalore Tech Summit.",
+      "type": "event"
+    },
+    {
+      "id": "t2",
+      "date": "Oct 14",
+      "time": "21:00",
+      "title": "Massive Data Transfer",
+      "description": "Arjun Sharma downloads 200MB of Quantum Server blueprints to external drive.",
+      "type": "alert"
+    },
+    {
+      "id": "t3",
+      "date": "Oct 14",
+      "time": "21:35",
+      "title": "Desai pings Apex Pharmaceuticals",
+      "description": "Priya Desai's phone connects to the tower near the office, breaking her alibi.",
+      "type": "alert"
+    },
+    {
+      "id": "t4",
+      "date": "Oct 14",
+      "time": "21:49",
+      "title": "Black SUV Arrives",
+      "description": "Unidentified Black SUV enters Apex parking B2. Two men disembark.",
+      "type": "event"
+    },
+    {
+      "id": "t5",
+      "date": "Oct 14",
+      "time": "21:51",
+      "title": "Arjun Sharma Flees",
+      "description": "Arjun observed rapidly exiting facility with messenger bag.",
+      "type": "alert"
+    },
+    {
+      "id": "t6",
+      "date": "Oct 14",
+      "time": "22:55",
+      "title": "Vehicle Abandoned",
+      "description": "Arjun's vehicle tracked to Outer Ring Road, engine idling. Burner phone pings same location.",
+      "type": "event"
+    }
+  ]
+}

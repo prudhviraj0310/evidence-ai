@@ -1,0 +1,83 @@
+{
+  "evidenceId": "EV-004",
+  "summary": "OnStar GPS data and related cell tower information for Vance vehicle QX7-992, spanning from October 15 to October 16. The data tracks the vehicle's movement from Nexus Biotech to Route 9 mile marker 12, where it stopped. Vance's phone went offline concurrently with the vehicle stopping. A burner phone was active at the same location, going offline shortly after the vehicle's door was briefly opened and closed. The vehicle was found abandoned, running, and locked the following morning with Vance missing. Details regarding the burner phone's anonymous purchase are also included.",
+  "extractedEntities": {
+    "persons": [
+      "Vance",
+      "guy in dark hoodie"
+    ],
+    "locations": [
+      "Nexus Biotech parking",
+      "I-80 westbound",
+      "Route 9",
+      "Route 9 mile marker 12",
+      "Walmart"
+    ],
+    "timestamps": [
+      "Oct 12",
+      "Oct 15",
+      "10:06:30 PM",
+      "10:15:45 PM",
+      "10:40:12 PM",
+      "10:55:00 PM",
+      "11:05:00 PM",
+      "11:05:15 PM",
+      "11:06 PM",
+      "Oct 16",
+      "1:12:00 AM",
+      "6:30:00 AM"
+    ],
+    "phoneNumbers": [
+      "+1-201-555-0199"
+    ],
+    "vehicles": [
+      "Vance vehicle QX7-992"
+    ],
+    "keywords": [
+      "OnStar data dump",
+      "pulled",
+      "burner number",
+      "cash transaction",
+      "no ID",
+      "security cam",
+      "dark hoodie",
+      "stopped",
+      "door opened",
+      "door closed",
+      "engine idling",
+      "fuel at 30%",
+      "state patrol",
+      "found the car",
+      "engine running",
+      "doors locked",
+      "nobody inside",
+      "last ping",
+      "went dead",
+      "premeditation",
+      "missing person",
+      "abduction"
+    ]
+  },
+  "threatLevel": "critical",
+  "suspicionScore": 95,
+  "findings": [
+    "Vance vehicle QX7-992 traveled from Nexus Biotech parking to Route 9 mile marker 12 on October 15, stopping at 10:55:00 PM.",
+    "Vance's phone last pinged at Route 9 mile marker 12 at 10:55:00 PM, then ceased all activity, strongly indicating Vance was present at this location when the vehicle stopped and their communication device went offline.",
+    "A burner phone (+1-201-555-0199) pinged the same cell tower at Route 9 mile marker 12 at 10:55:00 PM, suggesting a pre-arranged meeting or an orchestrated interception.",
+    "The burner phone went dead at 11:06:00 PM, which is shortly after Vance's vehicle door was opened (11:05:00 PM) and closed (11:05:15 PM). This timing suggests an interaction with the occupant of the Vance vehicle and subsequent deactivation or disposal of the burner phone.",
+    "The burner phone was purchased anonymously with cash by a 'guy in dark hoodie' on October 12, three days prior to the incident, indicating premeditation and an attempt to avoid identification.",
+    "The brief 15-second duration of the vehicle's door being open at 11:05 PM suggests a rapid interaction, transfer, or forced removal.",
+    "Vance's vehicle was found on October 16 at 6:30:00 AM at Route 9 mile marker 12, with the engine running, doors locked, and nobody inside. This state strongly suggests Vance did not voluntarily leave the vehicle in this manner.",
+    "Vance is currently a missing person, with the combined evidence pointing towards a probable abduction or forced disappearance orchestrated by at least one other individual."
+  ],
+  "contradictions": [],
+  "metadata": {
+    "language": "English",
+    "contentType": "document",
+    "authenticity": "appears_genuine"
+  },
+  "fileName": "EV-004_GPS_Data.txt",
+  "fileType": "text/plain",
+  "uploadedAt": "2026-05-14T08:54:59.216Z",
+  "status": "analyzed"
+}
