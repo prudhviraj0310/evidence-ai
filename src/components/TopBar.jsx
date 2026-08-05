@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { Search, Clock } from 'lucide-react';
+import { Search, Clock, RotateCcw } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useCase } from '../context/CaseContext';
 
 export default function TopBar() {
   const [time, setTime] = useState(new Date());
-  const { summary } = useCase();
+  const { summary, health, resetAll } = useCase();
 
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 1000);
@@ -14,6 +14,8 @@ export default function TopBar() {
 
   const threatLevel = summary?.threatLevel || 'STANDBY';
   const isCritical = threatLevel === 'CRITICAL';
+  const engineUp = !!health?.ok;
+  const engineLabel = !engineUp ? 'ENGINE OFFLINE' : health.geminiConfigured ? 'LIVE AI + DETERMINISTIC' : 'DETERMINISTIC MODE';
 
   return (
     <header style={{
@@ -43,6 +45,23 @@ export default function TopBar() {
 
       {/* Right */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginLeft: 24 }}>
+        {/* Engine health — a REAL ping, not a static label */}
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 8, padding: '8px 14px', borderRadius: 14,
+          background: engineUp ? 'rgba(52,211,153,0.06)' : 'rgba(239,68,68,0.08)',
+          border: engineUp ? '1px solid rgba(52,211,153,0.18)' : '1px solid rgba(239,68,68,0.25)',
+        }}>
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: engineUp ? '#34d399' : '#ef4444', boxShadow: `0 0 8px ${engineUp ? 'rgba(52,211,153,0.7)' : 'rgba(239,68,68,0.8)'}` }} />
+          <span style={{ fontSize: 9, fontWeight: 800, letterSpacing: '0.15em', color: engineUp ? '#34d399' : '#f87171' }}>{engineLabel}</span>
+        </div>
+
+        {/* New case (explicit — a refresh never wipes the demo) */}
+        <button onClick={() => { if (confirm('Start a new case? This clears all evidence.')) resetAll(); }}
+          title="New case"
+          style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '8px 14px', borderRadius: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', cursor: 'pointer', fontSize: 10, fontWeight: 800, letterSpacing: '0.12em', color: '#9ca3af' }}>
+          <RotateCcw size={12} /> NEW CASE
+        </button>
+
         {/* Threat */}
         <div style={{
           display: 'flex', alignItems: 'center', gap: 10,

@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
-import { Shield, LayoutDashboard, Upload, Clock, AlertTriangle, FileText } from 'lucide-react';
+import { Shield, LayoutDashboard, Upload, Clock, AlertTriangle, FileText, Gavel, MessageSquare, GitBranch } from 'lucide-react';
 
 const navItems = [
   { id: 'dashboard', label: 'Command Center', icon: LayoutDashboard },
   { id: 'upload', label: 'Upload Evidence', icon: Upload },
+  { id: 'verdict', label: 'The Verdict', icon: Gavel, hot: true },
+  { id: 'interrogate', label: 'Interrogate', icon: MessageSquare },
   { id: 'timeline', label: 'Event Timeline', icon: Clock },
   { id: 'contradictions', label: 'Contradictions', icon: AlertTriangle },
+  { id: 'network', label: 'Network Graph', icon: GitBranch },
   { id: 'summary', label: 'Final Report', icon: FileText },
 ];
 
@@ -66,7 +69,7 @@ export default function Sidebar({ activePage, setActivePage }) {
               onMouseEnter={(e) => { if (!isActive) { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.color = '#e5e7eb'; }}}
               onMouseLeave={(e) => { if (!isActive) { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#9ca3af'; }}}
             >
-              <Icon size={20} color={isActive ? '#818cf8' : '#6b7280'} />
+              <Icon size={20} color={isActive ? '#818cf8' : item.hot ? '#ef4444' : '#6b7280'} />
               <span>{item.label}</span>
             </button>
           );

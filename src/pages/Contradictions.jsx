@@ -45,20 +45,19 @@ export default function Contradictions() {
               </div>
               <h1 style={{ fontSize: 56, fontWeight: 900, color: 'white', marginBottom: 8, textShadow: '0 0 40px rgba(239,68,68,0.3)' }}>CONTRADICTION</h1>
               <div style={{ height: 1, background: 'linear-gradient(90deg, transparent, #ef4444, transparent)', marginBottom: 20 }} />
-              <p style={{ fontSize: 18, color: '#fca5a5', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: 40 }}>Critical Alibi Mismatch</p>
+              <p style={{ fontSize: 18, color: '#fca5a5', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: 40 }}>{contradictions[0].title}</p>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, textAlign: 'left' }}>
                 <div style={{ padding: 24, borderRadius: 16, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(239,68,68,0.2)' }}>
                   <div style={{ height: 3, background: '#6b7280', borderRadius: 4, marginBottom: 16 }} />
-                  <p style={{ fontSize: 9, fontWeight: 700, color: '#6b7280', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 10 }}>Statement</p>
-                  <p style={{ fontSize: 16, color: '#e5e7eb', lineHeight: 1.6 }}>"She was with me at the gala all evening."</p>
-                  <p style={{ fontSize: 12, color: '#f87171', marginTop: 12, fontFamily: 'monospace', fontWeight: 700 }}>— CEO Statement</p>
+                  <p style={{ fontSize: 9, fontWeight: 700, color: '#6b7280', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 10 }}>The Statement</p>
+                  <p style={{ fontSize: 16, color: '#e5e7eb', lineHeight: 1.6 }}>"{(contradictions[0].assertionQuote || '').slice(0, 160) || contradictions[0].title}"</p>
                 </div>
                 <div style={{ padding: 24, borderRadius: 16, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(239,68,68,0.4)' }}>
                   <div style={{ height: 3, background: '#ef4444', borderRadius: 4, marginBottom: 16 }} />
-                  <p style={{ fontSize: 9, fontWeight: 700, color: '#6b7280', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 10 }}>CCTV Evidence</p>
-                  <p style={{ fontSize: 16, color: '#e5e7eb', lineHeight: 1.6 }}>Subject confirmed at parking structure during stated alibi window.</p>
-                  <p style={{ fontSize: 12, color: '#f87171', marginTop: 12, fontFamily: 'monospace', fontWeight: 700 }}>— Camera B2 · 21:52</p>
+                  <p style={{ fontSize: 9, fontWeight: 700, color: '#6b7280', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 10 }}>The Physical Record</p>
+                  <p style={{ fontSize: 15, color: '#e5e7eb', lineHeight: 1.6 }}>{contradictions[0].description.slice(0, 260)}</p>
+                  <p style={{ fontSize: 12, color: '#f87171', marginTop: 12, fontFamily: 'monospace', fontWeight: 700 }}>— {(contradictions[0].evidence || []).join(' · ')}</p>
                 </div>
               </div>
             </div>

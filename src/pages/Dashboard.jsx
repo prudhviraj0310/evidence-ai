@@ -30,11 +30,10 @@ function StatCard({ icon: Icon, label, value, sub, isAlert }) {
 export default function Dashboard() {
   const { evidence, contradictions, summary } = useCase();
 
-  const avgSuspicion = evidence.length >= 3 ? 98 : (evidence.length > 0
+  const avgSuspicion = evidence.length > 0
     ? Math.round(evidence.reduce((a, e) => a + (e.suspicionScore || 0), 0) / evidence.length)
-    : 0);
+    : 0;
   const suspects = summary?.suspects || [];
-  const cinematicRiskScores = [98, 84, 72, 91];
 
   return (
     <div style={{ padding: 28 }}>
@@ -130,8 +129,8 @@ export default function Dashboard() {
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 {suspects.map((s, i) => {
-                  const risk = cinematicRiskScores[i] || s.risk || 84;
-                  const isHigh = risk > 80;
+                  const risk = s.risk ?? 0;
+                  const isHigh = risk > 50;
                   return (
                     <div key={i}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>

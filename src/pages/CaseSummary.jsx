@@ -6,9 +6,8 @@ import { ProcessingLoader } from '../components/ScanEffect';
 export default function CaseSummary() {
   const { summary, evidence, timeline, contradictions, buildSummary, loading } = useCase();
   const handleGenerate = async () => { try { await buildSummary(); } catch (e) { console.error(e); } };
-  const score = evidence.length >= 3 ? 98 : (summary?.overallSuspicionScore || 0);
-  const getScoreColor = (s) => s > 70 ? '#ef4444' : s > 40 ? '#f59e0b' : '#34d399';
-  const cinematicRiskScores = [98, 84, 72, 91];
+  const score = summary?.overallSuspicionScore || 0;
+  const getScoreColor = (s) => s > 55 ? '#ef4444' : s > 35 ? '#f59e0b' : '#34d399';
 
   return (
     <div style={{ padding: 28 }}>
@@ -134,8 +133,8 @@ export default function CaseSummary() {
               <h3 style={{ fontSize: 10, fontWeight: 700, color: '#4b5563', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: 16 }}>Suspects</h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
                 {summary.suspects.map((s, i) => {
-                  const risk = cinematicRiskScores[i] || s.risk || 84;
-                  const isHigh = risk > 80;
+                  const risk = s.risk ?? 0;
+                  const isHigh = risk > 50;
                   return (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 14, borderRadius: 14, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
                       <div style={{

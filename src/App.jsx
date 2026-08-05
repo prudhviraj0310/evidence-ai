@@ -6,22 +6,28 @@ import EvidenceUpload from './pages/EvidenceUpload';
 import CrimeTimeline from './pages/CrimeTimeline';
 import Contradictions from './pages/Contradictions';
 import CaseSummary from './pages/CaseSummary';
+import Verdict from './pages/Verdict';
+import Interrogate from './pages/Interrogate';
+import RelationshipGraph from './pages/RelationshipGraph';
 import Sidebar from './components/Sidebar';
 import TopBar from './components/TopBar';
+import EvidenceDrawer from './components/EvidenceDrawer';
 import { CaseProvider, useCase } from './context/CaseContext';
 
 const SIDEBAR_WIDTH = 260;
 
 function MainAppInner({ onLogout }) {
   const [activePage, setActivePage] = useState('dashboard');
-  // The server state is now cleared when clicking 'Start Investigation' on the Landing Page
 
   const renderPage = () => {
     switch (activePage) {
       case 'dashboard': return <Dashboard />;
       case 'upload': return <EvidenceUpload />;
+      case 'verdict': return <Verdict />;
+      case 'interrogate': return <Interrogate />;
       case 'timeline': return <CrimeTimeline />;
       case 'contradictions': return <Contradictions />;
+      case 'network': return <RelationshipGraph />;
       case 'summary': return <CaseSummary />;
       default: return <Dashboard />;
     }
@@ -49,6 +55,7 @@ function MainAppInner({ onLogout }) {
               </motion.div>
             </AnimatePresence>
           </div>
+          <EvidenceDrawer />
         </main>
       </div>
     </div>
@@ -71,10 +78,7 @@ export default function App() {
     <div style={{ minHeight: '100vh', color: 'white', fontFamily: "'Outfit', system-ui, sans-serif", background: '#05050A' }}>
       <AnimatePresence mode="wait">
         {showLanding ? (
-          <LandingPage key="landing" onStart={() => {
-            fetch('http://localhost:3001/api/reset', { method: 'POST' }).catch(() => {});
-            setShowLanding(false);
-          }} />
+          <LandingPage key="landing" onStart={() => setShowLanding(false)} />
         ) : (
           <MainApp key="main" onLogout={() => setShowLanding(true)} />
         )}

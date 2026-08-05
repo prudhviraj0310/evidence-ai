@@ -18,6 +18,12 @@ server/.env
 
 # Server runtime artifacts
 server/uploads/
+server/data/
+server/cache/
+SCANNED_RESULTS/
+
+# Raw IEEE VAST download (51MB — regenerate: see server/tools/convert-vast.js)
+benchmark_data/
 
 # Editor directories and files
 .vscode/*

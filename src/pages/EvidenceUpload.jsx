@@ -33,19 +33,50 @@ export default function EvidenceUpload() {
     };
     setFiles(prev => [...prev, fileEntry]);
     try {
-      for (let i = 0; i < SCAN_STAGES.length; i++) {
-        setFiles(prev => prev.map(f => f.id === fileEntry.id ? { ...f, phase: SCAN_STAGES[i] } : f));
-        await new Promise(r => setTimeout(r, 700));
-      }
-      const result = await uploadEvidence(file);
+      // Real per-stage progress from the actual pipeline — no scripted delays.
+      const result = await uploadEvidence(file, (stage, message) => {
+        setFiles(prev => prev.map(f => f.id === fileEntry.id ? { ...f, phase: message } : f));
+      });
       setFiles(prev => prev.map(f => f.id === fileEntry.id ? { ...f, status: 'complete', result, phase: 'Done' } : f));
     } catch (err) {
       setFiles(prev => prev.map(f => f.id === fileEntry.id ? { ...f, status: 'error', error: err.message } : f));
     }
   }, [uploadEvidence]);
 
-  const handleFiles = useCallback((newFiles) => Array.from(newFiles).forEach(processFile), [processFile]);
-  const handleDrop = useCallback((e) => { e.preventDefault(); setDragOver(false); if (e.dataTransfer.files.length) handleFiles(e.dataTransfer.files); }, [handleFiles]);
+  // Serialize multi-file uploads — no self-inflicted stampede.
+  const handleFiles = useCallback(async (newFiles) => {
+    for (const f of Array.from(newFiles)) await processFile(f);
+  }, [processFile]);
+
+  // Folder drops are traversed: dragging EVIDENCE_DEMO/ ingests every file inside.
+  const collectEntry = (entry) => new Promise((resolve) => {
+    if (entry.isFile) {
+      entry.file((f) => resolve([f]), () => resolve([]));
+    } else if (entry.isDirectory) {
+      const reader = entry.createReader();
+      const all = [];
+      const readBatch = () => reader.readEntries(async (entries) => {
+        if (!entries.length) {
+          const nested = await Promise.all(all.map(collectEntry));
+          resolve(nested.flat());
+        } else { all.push(...entries); readBatch(); }
+      }, () => resolve([]));
+      readBatch();
+    } else resolve([]);
+  });
+
+  const handleDrop = useCallback(async (e) => {
+    e.preventDefault(); setDragOver(false);
+    const items = Array.from(e.dataTransfer.items || []);
+    const entries = items.map((i) => i.webkitGetAsEntry?.()).filter(Boolean);
+    if (entries.length) {
+      const nested = await Promise.all(entries.map(collectEntry));
+      const files = nested.flat().filter((f) => !f.name.startsWith('.'))
+        .sort((a, b) => a.name.localeCompare(b.name));
+      if (files.length) return handleFiles(files);
+    }
+    if (e.dataTransfer.files.length) handleFiles(e.dataTransfer.files);
+  }, [handleFiles]);
 
   return (
     <div style={{ padding: 28 }}>
@@ -122,8 +153,8 @@ export default function EvidenceUpload() {
                   </div>
                   {f.result && (
                     <div style={{ textAlign: 'right', padding: '0 8px' }}>
-                      <div style={{ fontSize: 22, fontWeight: 900, color: (f.result.suspicionScore || f.result.SuspicionScore || 92) > 70 ? '#ef4444' : '#34d399' }}>{f.result.suspicionScore || f.result.SuspicionScore || 92}%</div>
-                      <span style={{ fontSize: 9, fontWeight: 700, color: '#4b5563', textTransform: 'uppercase' }}>{f.result.threatLevel || f.result.ThreatLevel || 'HIGH'}</span>
+                      <div style={{ fontSize: 22, fontWeight: 900, color: (f.result.suspicionScore ?? 0) > 60 ? '#ef4444' : '#34d399' }}>{f.result.suspicionScore ?? '—'}%</div>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: '#4b5563', textTransform: 'uppercase' }}>{f.result.claimCount != null ? `${f.result.claimCount} claims` : (f.result.threatLevel || '')}</span>
                     </div>
                   )}
                   <button onClick={() => setFiles(prev => prev.filter(x => x.id !== f.id))}

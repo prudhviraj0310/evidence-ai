@@ -1,78 +1,66 @@
-const API_BASE = 'http://localhost:3001/api';
+// API client — proxied through Vite in dev ('/api' → localhost:3001), so
+// the app also works from a phone/tunnel/deployed host.
+const API_BASE = import.meta.env.VITE_API_BASE ?? '/api';
+
+async function request(path, options = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), options.timeoutMs ?? 120000);
+  try {
+    const response = await fetch(`${API_BASE}${path}`, { ...options, signal: controller.signal });
+    let body = null;
+    try { body = await response.json(); } catch { /* non-JSON error */ }
+    if (!response.ok) {
+      throw new Error(body?.error || `Request failed (${response.status})`);
+    }
+    return body;
+  } finally {
+    clearTimeout(timer);
+  }
+}
 
 export async function analyzeEvidence(file, ocrText = '') {
   const formData = new FormData();
   formData.append('file', file);
-  if (ocrText) {
-    formData.append('ocrText', ocrText);
-  }
+  if (ocrText) formData.append('ocrText', ocrText);
   formData.append('fileName', file.name);
   formData.append('fileType', file.type);
-  formData.append('timestamp', new Date().toISOString());
-
-  const response = await fetch(`${API_BASE}/analyze`, {
-    method: 'POST',
-    body: formData,
-  });
-
-  if (!response.ok) {
-    throw new Error('Failed to analyze evidence');
-  }
-
-  return response.json();
+  return request('/analyze', { method: 'POST', body: formData });
 }
 
 export async function analyzeText(text, fileName = 'Text Note') {
-  const response = await fetch(`${API_BASE}/analyze`, {
+  return request('/analyze', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      ocrText: text,
-      fileName,
-      fileType: 'text/plain',
-      timestamp: new Date().toISOString(),
-    }),
+    body: JSON.stringify({ ocrText: text, fileName, fileType: 'text/plain' }),
   });
-
-  if (!response.ok) {
-    throw new Error('Failed to analyze text');
-  }
-
-  return response.json();
 }
 
-export async function generateTimeline() {
-  const response = await fetch(`${API_BASE}/timeline`, { method: 'POST' });
-  if (!response.ok) throw new Error('Failed to generate timeline');
-  return response.json();
-}
+export const solveCase = () => request('/solve', { method: 'POST', timeoutMs: 300000 });
+export const askCase = (question) => request('/ask', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ question }),
+});
+export const loadDemo = (opts = {}) => request('/demo', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(opts),
+  timeoutMs: 300000,
+});
+export const getEvidenceRaw = (evidenceId) => request(`/evidence/${evidenceId}/raw`);
+export const getHealth = () => request('/health', { timeoutMs: 5000 });
 
-export async function detectContradictions() {
-  const response = await fetch(`${API_BASE}/contradictions`, { method: 'POST' });
-  if (!response.ok) throw new Error('Failed to detect contradictions');
-  return response.json();
-}
+export const generateTimeline = () => request('/timeline', { method: 'POST' });
+export const detectContradictions = () => request('/contradictions', { method: 'POST' });
+export const generateRelationships = () => request('/relationships', { method: 'POST' });
+export const generateSummary = () => request('/summary', { method: 'POST', timeoutMs: 300000 });
+export const getCaseState = () => request('/case');
+export const resetCase = () => request('/reset', { method: 'POST' });
 
-export async function generateRelationships() {
-  const response = await fetch(`${API_BASE}/relationships`, { method: 'POST' });
-  if (!response.ok) throw new Error('Failed to generate relationships');
-  return response.json();
-}
-
-export async function generateSummary() {
-  const response = await fetch(`${API_BASE}/summary`, { method: 'POST' });
-  if (!response.ok) throw new Error('Failed to generate summary');
-  return response.json();
-}
-
-export async function getCaseState() {
-  const response = await fetch(`${API_BASE}/case`);
-  if (!response.ok) throw new Error('Failed to get case state');
-  return response.json();
-}
-
-export async function resetCase() {
-  const response = await fetch(`${API_BASE}/reset`, { method: 'POST' });
-  if (!response.ok) throw new Error('Failed to reset case');
-  return response.json();
+export function openStream(onEvent) {
+  const es = new EventSource(`${API_BASE}/stream`);
+  es.onmessage = (e) => {
+    try { onEvent(JSON.parse(e.data)); } catch { /* ignore malformed */ }
+  };
+  return es;
 }

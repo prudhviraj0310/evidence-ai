@@ -1,0 +1,94 @@
+CORPORATE EMAIL METADATA EXPORT - GASTECH INTERNAL SECURITY REVIEW
+Scope: messages involving facilities/security staff, two weeks before the disappearance
+Date: January 6, 2014 - January 17, 2014
+
+[2014-01-06 10:28:00] Varja Lagos: (to Hennie Osvaldo, Loreto Bodrogi, Inga Ferro) Patrol schedule changes
+[2014-01-06 11:00:00] Linnea Bergen: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Upcoming birthdays
+[2014-01-06 11:04:00] Loreto Bodrogi: (to Ingrid Barranco) Plants
+[2014-01-06 11:16:00] Linnea Bergen: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Upcoming birthdays
+[2014-01-06 12:05:00] Mat Bramar: (to Anda Ribera, Rachel Pantanal, Linda Lagos, Ruscella Mies Haber) Craft night
+[2014-01-06 12:15:00] Ingrid Barranco: (to Loreto Bodrogi) RE: Plants
+[2014-01-06 12:44:00] Loreto Bodrogi: (to Varja Lagos, Hennie Osvaldo, Inga Ferro) RE: Patrol schedule changes
+[2014-01-06 12:48:00] Loreto Bodrogi: (to Ingrid Barranco) RE: Plants
+[2014-01-06 13:08:00] Felix Resumir: (to Hideki Cocinaro, Inga Ferro, Varja Lagos, Kanon Herrero) RE: Inspection request for site
+[2014-01-06 13:14:00] Bertrand Ovan: (to Emile Arpa, Varro Awelon, Dante Coginian, Albina Hafon) Facilities preparations for VIP visit
+[2014-01-06 13:21:00] Ingrid Barranco: (to Loreto Bodrogi) RE: Plants
+[2014-01-06 13:24:00] Carla Forluniau: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) Question - Protocol for VIP visit
+[2014-01-06 13:26:00] Loreto Bodrogi: (to Ingrid Barranco) RE: Plants
+[2014-01-06 13:29:00] Anda Ribera: (to Mat Bramar, Rachel Pantanal, Linda Lagos, Ruscella Mies Haber) RE: Craft night
+[2014-01-06 13:42:00] Hennie Osvaldo: (to Kanon Herrero) Concert tickets
+[2014-01-06 13:48:00] Cornelia Lais: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Craft night
+[2014-01-06 13:59:00] Adan Morlun: (to Claudio Hawelon, Benito Hawelon, Henk Mies, Dylan Scozzese) RE: New refueling policies - Effective February 1
+[2014-01-06 14:26:00] Benito Hawelon: (to Dante Coginian, Albina Hafon, Henk Mies) RE: Route suggestion for next shift
+[2014-01-06 14:33:00] Albina Hafon: (to Dante Coginian, Benito Hawelon, Henk Mies) RE: Route suggestion for next shift
+[2014-01-06 14:38:00] Anda Ribera: (to Mat Bramar, Rachel Pantanal, Linda Lagos, Ruscella Mies Haber) RE: Craft night
+[2014-01-06 14:53:00] Ruscella Mies Haber: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Craft night
+[2014-01-06 15:04:00] Kanon Herrero: (to Hennie Osvaldo) RE: Concert tickets
+[2014-01-06 15:30:00] Ruscella Mies Haber: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Craft night
+[2014-01-06 15:42:00] Mat Bramar: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) All staff announcement
+[2014-01-06 15:54:00] Ruscella Mies Haber: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) Good morning, GasTech!
+[2014-01-06 16:38:00] Adan Morlun: (to Irene Nant, Dante Coginian, Emile Arpa, Varro Awelon) RE: Facilities preparations for VIP visit
+[2014-01-06 16:44:00] Ruscella Mies Haber: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Question - Protocol for VIP visit
+[2014-01-06 18:08:00] Cecilia Morluniau: (to Dylan Scozzese, Emile Arpa, Henk Mies, Adan Morlun) RE: Facilities preparations for VIP visit
+[2014-01-07 08:27:00] Mat Bramar: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) Service anniversaries!
+[2014-01-07 08:46:00] Irene Nant: (to Bertrand Ovan, Varro Awelon, Dante Coginian, Adan Morlun) Traffic advisory for today
+[2014-01-07 08:53:00] Dylan Scozzese: (to Irene Nant, Adan Morlun, Valeria Morlun, Emile Arpa) List of repairs needed
+[2014-01-07 10:00:00] Mat Bramar: (to Anda Ribera, Rachel Pantanal, Linda Lagos, Ruscella Mies Haber) Dress for success - Dress to impress
+[2014-01-07 10:06:00] Isia Vann: (to Rachel Pantanal) This weekend?
+[2014-01-07 10:32:00] Inga Ferro: (to Willem Vasco-Pais) Late for meeting
+[2014-01-07 10:35:00] Ruscella Mies Haber: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) Daily morning announcements
+[2014-01-07 10:48:00] Isia Vann: (to Rachel Pantanal) Karoake night
+[2014-01-07 11:15:00] Rachel Pantanal: (to Isia Vann) RE: Karoake night - :)
+[2014-01-07 11:19:00] Varro Awelon: (to Bertrand Ovan, Dante Coginian, Adan Morlun, Albina Hafon) RE: Traffic advisory for today
+[2014-01-07 11:21:00] Henk Mies: (to Irene Nant, Adan Morlun, Valeria Morlun, Emile Arpa) RE: List of repairs needed
+[2014-01-07 11:22:00] Lucas Alcazar: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Service anniversaries!
+[2014-01-07 11:22:00] Rachel Pantanal: (to Isia Vann) RE: This weekend?
+[2014-01-07 11:26:00] Bertrand Ovan: (to Irene Nant, Adan Morlun, Valeria Morlun, Emile Arpa) RE: List of repairs needed
+[2014-01-07 11:30:00] Irene Nant: (to Bertrand Ovan, Varro Awelon, Dante Coginian, Adan Morlun) RE: Traffic advisory for today
+[2014-01-07 11:37:00] Adan Morlun: (to Valeria Morlun, Henk Mies, Albina Hafon, Dylan Scozzese) Traffic advisory for today
+[2014-01-07 11:53:00] Willem Vasco-Pais: (to Inga Ferro) RE: Late for meeting
+[2014-01-07 11:58:00] Isia Vann: (to Rachel Pantanal) RE: Karoake night - :)
+[2014-01-07 12:05:00] Inga Ferro: (to Willem Vasco-Pais) RE: Late for meeting
+[2014-01-07 12:07:00] Willem Vasco-Pais: (to Inga Ferro) RE: Late for meeting
+[2014-01-07 12:09:00] Claudio Hawelon: (to Irene Nant, Adan Morlun, Valeria Morlun, Emile Arpa) RE: List of repairs needed
+[2014-01-07 12:18:00] Cecilia Morluniau: (to Bertrand Ovan, Varro Awelon, Dante Coginian, Adan Morlun) RE: Traffic advisory for today
+[2014-01-07 12:25:00] Cecilia Morluniau: (to Bertrand Ovan, Varro Awelon, Dante Coginian, Adan Morlun) RE: Traffic advisory for today
+[2014-01-07 12:29:00] Cornelia Lais: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Dress for success - Dress to impress
+[2014-01-07 12:30:00] Gustav Cazar: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Service anniversaries!
+[2014-01-07 12:40:00] Cecilia Morluniau: (to Bertrand Ovan, Varro Awelon, Dante Coginian, Adan Morlun) RE: Traffic advisory for today
+[2014-01-07 13:03:00] Linda Lagos: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Ruscella Mies Haber) Catering?!?
+[2014-01-07 13:06:00] Mat Bramar: (to Anda Ribera, Rachel Pantanal, Linda Lagos, Ruscella Mies Haber) RE: Dress for success - Dress to impress
+[2014-01-07 13:16:00] Varja Lagos: (to Kanon Herrero, Stenig Fusil, Inga Ferro, Hideki Cocinaro) Resolution of incident
+[2014-01-07 13:18:00] Cornelia Lais: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Dress for success - Dress to impress
+[2014-01-07 13:37:00] Anda Ribera: (to Mat Bramar, Rachel Pantanal, Linda Lagos, Ruscella Mies Haber) RE: Dress for success - Dress to impress
+[2014-01-07 13:48:00] Adan Morlun: (to Valeria Morlun, Henk Mies, Albina Hafon, Dylan Scozzese) RE: Traffic advisory for today
+[2014-01-07 14:07:00] Adan Morlun: (to Henk Mies, Albina Hafon) List of repairs needed
+[2014-01-07 14:12:00] Bertrand Ovan: (to Emile Arpa, Varro Awelon, Dante Coginian, Albina Hafon) Mandatory safety training
+[2014-01-07 14:21:00] Cornelia Lais: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) Can someone cover for me next week?
+[2014-01-07 14:21:00] Rachel Pantanal: (to Mat Bramar, Anda Ribera, Linda Lagos, Ruscella Mies Haber) Too funy - you have to see this...
+[2014-01-07 14:25:00] Mat Bramar: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) Planning for staff picnic
+[2014-01-07 14:59:00] Adan Morlun: (to Valeria Morlun, Henk Mies, Albina Hafon, Dylan Scozzese) RE: Traffic advisory for today
+[2014-01-07 15:09:00] Edvard Vann: (to Elsa Orilla) Money for coffee fund
+[2014-01-07 15:13:00] Henk Mies: (to Adan Morlun, Valeria Morlun, Albina Hafon, Dylan Scozzese) RE: Traffic advisory for today
+[2014-01-07 15:31:00] Hideki Cocinaro: (to Kanon Herrero, Stenig Fusil, Inga Ferro, Hennie Osvaldo) RE: Resolution of incident
+[2014-01-07 15:32:00] Albina Hafon: (to Adan Morlun, Valeria Morlun, Henk Mies, Dylan Scozzese) RE: Traffic advisory for today
+[2014-01-07 15:33:00] Stenig Fusil: (to Kanon Herrero, Inga Ferro, Hideki Cocinaro, Hennie Osvaldo) RE: Resolution of incident
+[2014-01-07 15:41:00] Hennie Osvaldo: (to Kanon Herrero, Stenig Fusil, Inga Ferro, Hideki Cocinaro) RE: Resolution of incident
+[2014-01-07 15:50:00] Bertrand Ovan: (to Emile Arpa, Varro Awelon, Dante Coginian, Albina Hafon) Be Careful!
+[2014-01-07 15:50:00] Bertrand Ovan: (to Emile Arpa, Varro Awelon, Dante Coginian, Albina Hafon) Safety First!
+[2014-01-07 16:00:00] Henk Mies: (to Albina Hafon) RE: List of repairs needed
+[2014-01-07 16:02:00] Henk Mies: (to Adan Morlun, Valeria Morlun, Albina Hafon, Dylan Scozzese) RE: Traffic advisory for today
+[2014-01-07 16:08:00] Ingrid Barranco: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Planning for staff picnic
+[2014-01-07 16:10:00] Anda Ribera: (to Mat Bramar, Rachel Pantanal, Linda Lagos, Ruscella Mies Haber) RE: Catering?!?
+[2014-01-07 16:15:00] Edvard Vann: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Planning for staff picnic
+[2014-01-07 16:18:00] Stenig Fusil: (to Kanon Herrero, Inga Ferro, Hideki Cocinaro, Hennie Osvaldo) RE: Resolution of incident
+[2014-01-07 16:29:00] Cornelia Lais: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Catering?!?
+[2014-01-07 16:39:00] Carla Forluniau: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Catering?!?
+[2014-01-07 16:51:00] Elsa Orilla: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Planning for staff picnic
+[2014-01-07 17:02:00] Ada Campo-Corrente: (to Rachel Pantanal, Lars Azada, Felix Balas, Isande Borrasca) RE: Planning for staff picnic
+[2014-01-07 17:19:00] Ruscella Mies Haber: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Can someone cover for me next week?
+[2014-01-07 17:22:00] Elsa Orilla: (to Edvard Vann) RE: Money for coffee fund
+[2014-01-07 17:22:00] Stenig Fusil: (to Kanon Herrero, Inga Ferro, Hideki Cocinaro, Hennie Osvaldo) RE: Resolution of incident
+[2014-01-07 17:26:00] Linda Lagos: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Ruscella Mies Haber) RE: Catering?!?
+[2014-01-07 17:28:00] Ruscella Mies Haber: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Can someone cover for me next week?
+[2014-01-07 17:33:00] Ruscella Mies Haber: (to Mat Bramar, Anda Ribera, Rachel Pantanal, Linda Lagos) RE: Catering?!?

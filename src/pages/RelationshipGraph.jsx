@@ -1,29 +1,36 @@
 import { useCallback, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { ReactFlow, Background, Controls, useNodesState, useEdgesState } from '@xyflow/react';
+import { ReactFlow, Background, Controls, Handle, Position, useNodesState, useEdgesState } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { GitBranch, Loader, Zap, Inbox } from 'lucide-react';
 import { useCase } from '../context/CaseContext';
 import { ProcessingLoader } from '../components/ScanEffect';
 
 const typeConfig = {
-  victim: { color: '#ff0040', icon: '👤', glow: '0 0 20px rgba(255,0,64,0.4)' },
-  suspect: { color: '#ff2d55', icon: '🔴', glow: '0 0 20px rgba(255,45,85,0.4)' },
+  victim: { color: '#00d4ff', icon: '🕊', glow: '0 0 20px rgba(0,212,255,0.4)' },
+  suspect: { color: '#ff2d55', icon: '🎯', glow: '0 0 24px rgba(255,45,85,0.5)' },
+  person: { color: '#818cf8', icon: '👤', glow: '0 0 14px rgba(129,140,248,0.3)' },
   phone: { color: '#ffaa00', icon: '📱', glow: '0 0 15px rgba(255,170,0,0.3)' },
+  device: { color: '#ffaa00', icon: '💳', glow: '0 0 15px rgba(255,170,0,0.3)' },
   vehicle: { color: '#a855f7', icon: '🚗', glow: '0 0 15px rgba(168,85,247,0.3)' },
-  location: { color: '#00d4ff', icon: '📍', glow: '0 0 15px rgba(0,212,255,0.3)' },
+  location: { color: '#34d399', icon: '📍', glow: '0 0 15px rgba(52,211,153,0.3)' },
   evidence: { color: '#00ff88', icon: '📄', glow: '0 0 15px rgba(0,255,136,0.3)' },
 };
 
 function CustomNode({ data }) {
   const cfg = typeConfig[data.type] || typeConfig.evidence;
+  const hot = data.type === 'suspect';
   return (
     <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }}
       className="px-3 py-2 rounded-xl text-center cursor-pointer min-w-[100px]"
-      style={{ background: `${cfg.color}10`, border: `1px solid ${cfg.color}40`, boxShadow: cfg.glow }}>
+      style={{ background: `${cfg.color}${hot ? '22' : '10'}`, border: `${hot ? 2 : 1}px solid ${cfg.color}${hot ? '90' : '40'}`, boxShadow: cfg.glow }}>
+      <Handle type="target" position={Position.Top} style={{ opacity: 0 }} />
       <div className="text-lg mb-0.5">{cfg.icon}</div>
       <div className="text-[10px] font-bold text-white truncate">{data.label}</div>
-      <div className="text-[8px] font-mono mt-0.5" style={{ color: cfg.color }}>{data.detail}</div>
+      <div className="text-[8px] font-mono mt-0.5" style={{ color: cfg.color }}>
+        {data.score > 0 ? `${data.score}/100 · ` : ''}{data.detail}
+      </div>
+      <Handle type="source" position={Position.Bottom} style={{ opacity: 0 }} />
     </motion.div>
   );
 }
@@ -37,8 +44,8 @@ export default function RelationshipGraph() {
   const rfNodes = useMemo(() => {
     return (relationships.nodes || []).map(n => ({
       id: n.id,
-      position: { x: n.x || Math.random() * 600 + 50, y: n.y || Math.random() * 400 + 50 },
-      data: { label: n.label, type: n.type, detail: n.detail },
+      position: { x: n.x ?? 400, y: n.y ?? 300 },
+      data: { label: n.label, type: n.type, detail: n.detail, score: n.score },
       type: 'custom',
     }));
   }, [relationships.nodes]);
