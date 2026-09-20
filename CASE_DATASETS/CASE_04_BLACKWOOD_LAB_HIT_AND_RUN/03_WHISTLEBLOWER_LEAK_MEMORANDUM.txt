@@ -1,0 +1,10 @@
+CONFIDENTIAL MEMORANDUM - TO BE DELIVERED TO FDA OFFICE OF CRIMINAL INVESTIGATIONS
+Date: August 11, 2026
+From: Dr. Kenneth Blackwood, Principal Research Scientist
+Subject: Fabrication of Phase III Cardiotoxicity Metrics in Compound VX-99
+
+I am compiling this record under federal whistleblower protections. Over the past six months, Dr. Victoria Chen has systematically altered patient telemetry logs to conceal severe cardiac arrhythmia events in Cohort B.
+
+When I confronted Dr. Chen with the unredacted clinical data on August 10, she stated that 'too much capital was invested to permit a recall.' She instructed IT to restrict my server credentials by tomorrow morning.
+
+I have backed up the raw clinical database to an external flash drive. If I experience retaliatory action or personal injury, this memorandum and the attached data logs must be transmitted immediately to the Inspector General.

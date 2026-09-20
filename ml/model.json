@@ -1,0 +1,110 @@
+{
+  "model_type": "RandomForest",
+  "metrics": {
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "role_accuracy": 1.0
+  },
+  "feature_names": [
+    "opportunity_score",
+    "means_score",
+    "motive_score",
+    "deception_score",
+    "graph_degree",
+    "co_location_count",
+    "calls_in_window",
+    "broken_alibi_flag",
+    "authority_rank"
+  ],
+  "feature_importance": [
+    {
+      "rank": 1,
+      "feature": "deception_score",
+      "importance": 0.363
+    },
+    {
+      "rank": 2,
+      "feature": "means_score",
+      "importance": 0.3112
+    },
+    {
+      "rank": 3,
+      "feature": "broken_alibi_flag",
+      "importance": 0.1854
+    },
+    {
+      "rank": 4,
+      "feature": "motive_score",
+      "importance": 0.0724
+    },
+    {
+      "rank": 5,
+      "feature": "opportunity_score",
+      "importance": 0.03
+    },
+    {
+      "rank": 6,
+      "feature": "calls_in_window",
+      "importance": 0.0182
+    },
+    {
+      "rank": 7,
+      "feature": "co_location_count",
+      "importance": 0.0114
+    },
+    {
+      "rank": 8,
+      "feature": "graph_degree",
+      "importance": 0.0084
+    },
+    {
+      "rank": 9,
+      "feature": "authority_rank",
+      "importance": 0.0
+    }
+  ],
+  "scaling": {
+    "mean": [
+      10.0309,
+      8.8749,
+      7.6249,
+      2.4809,
+      3.5191,
+      1.3849,
+      1.5209,
+      0.368,
+      0.3102
+    ],
+    "scale": [
+      10.5035,
+      7.1513,
+      8.7192,
+      3.2532,
+      2.734,
+      1.8848,
+      2.0931,
+      0.4823,
+      0.4626
+    ]
+  },
+  "logistic_proxy": {
+    "intercept": -1.1062,
+    "coefficients": [
+      1.9208,
+      1.2,
+      0.8969,
+      1.5372,
+      0.8401,
+      1.1108,
+      1.0052,
+      0.8037,
+      0.3256
+    ]
+  },
+  "role_classes": [
+    "CLEARED_WITNESS",
+    "EXECUTOR",
+    "ORCHESTRATOR"
+  ]
+}

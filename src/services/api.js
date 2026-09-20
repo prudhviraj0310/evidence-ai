@@ -57,6 +57,17 @@ export const generateSummary = () => request('/summary', { method: 'POST', timeo
 export const getCaseState = () => request('/case');
 export const resetCase = () => request('/reset', { method: 'POST' });
 
+// ═══ New enhanced API endpoints ═══
+export const getPipelineStatus = () => request('/pipeline');
+export const getHypotheses = () => request('/hypotheses');
+export const getDefenseCounsel = () => request('/defense');
+export const getHonestyGates = () => request('/honesty');
+export const getIncidents = () => request('/incidents');
+export const getLocationGraph = () => request('/locations');
+export const searchEvidence = (query) => request(`/search?q=${encodeURIComponent(query)}`);
+export const getAuditTrail = () => request('/audit');
+export const getMLVerdict = () => request('/ml/verdict');
+
 export function openStream(onEvent) {
   const es = new EventSource(`${API_BASE}/stream`);
   es.onmessage = (e) => {
@@ -64,3 +75,4 @@ export function openStream(onEvent) {
   };
   return es;
 }
+

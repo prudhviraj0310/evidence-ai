@@ -1,0 +1,14 @@
+HARBOUR BAY PORT AUTHORITY - ELECTRONIC GATE LOGS
+Location: Terminal 4 Commercial Gate
+Date: December 01, 2026 - December 02, 2026
+
+[22:00:00] SYSTEM: Terminal 4 Security Lockdown Engaged
+[02:18:22] RFID SENSOR: Supervisor Master Tag #RV-08 (Issued: Raymond Vance)
+[02:18:30] GATE 4: Barrier Raised - MANUAL OVERRIDE (Terminal Tower Auth)
+[02:20:00] SENSOR: Unmanifested Flatbed Transporter Entered (Axle Weight: 18.2 Tons)
+[02:22:15] RFID SENSOR: Supervisor Master Tag #RV-08 - Yard B Gate UNLOCKED
+[03:40:10] RFID SENSOR: Supervisor Master Tag #RV-08 - Gate 4 Barrier Raised
+[03:41:00] SENSOR: Flatbed Transporter Exited (Axle Weight: 32.6 Tons - Fully Loaded)
+[03:42:00] SYSTEM: Terminal 4 Security Lockdown Re-engaged
+
+Investigator Note: Shift Supervisor Raymond Vance stated under oath that no unauthorized vehicles were admitted and the yard was locked down without incident.

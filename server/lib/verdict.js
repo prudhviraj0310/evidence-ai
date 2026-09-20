@@ -12,10 +12,10 @@ const bus = require('./bus');
 const W = config.WEIGHTS;
 const G = config.GATES;
 
-const DISTRESS_RE = /they know|if i don'?t see you|give the drive to|taking the back stairwell|shouldn'?t be here/i;
-const EMBEZZLE_RE = /bleeding the accounts|cayman|embezzl|ledger|routing|accounts dry/i;
-const EXPOSURE_RE = /\bsec\b|expose|whistle|authorities|regulators/i;
-const SENIOR_RE = /\b(ceo|chief executive|president|director|head of security|chairman)\b/i;
+const DISTRESS_RE = /they know|if i don'?t see you|give the drive to|taking the back stairwell|shouldn'?t be here|missing|disappear|abduct|kidnap|hostage|vanish|attacked|shot|assault|victim|threatened/i;
+const EMBEZZLE_RE = /bleeding the accounts|cayman|embezzl|ledger|routing|accounts dry|fraud|bribe|debt|money|payment|smuggl|poach|illegal|threat|dispute|fired|revenge|contract|stole|theft|kickback|unauthorized|traffick/i;
+const EXPOSURE_RE = /\bsec\b|expose|whistle|authorities|regulators|police|fbi|doj|audit|subpoena|investigat|warrant/i;
+const SENIOR_RE = /\b(ceo|chief executive|president|director|head of security|chairman|manager|captain|officer|supervisor|lead|commander|vp|chief)\b/i;
 
 function computeVerdict(store) {
   bus.emit('VERDICT', 'Scoring engine started — weights: ' + JSON.stringify(W));
@@ -221,26 +221,27 @@ function scorePerson(store, p, victim, ctx) {
   }
   means = Math.min(W.MEANS_MAX, means);
 
-  // MOTIVE — accused of financial crime by the victim; threat of exposure
+  // MOTIVE — accused of financial or criminal wrongdoing, threat of exposure, anomalous funds
   let motive = 0;
   const surname = p.canonical.split(' ').pop().toLowerCase();
   const accusations = store.claims.filter((c) =>
-    c.type === 'communication' && victim && c.speakerEntityId === victim.entityId &&
-    c.sourceQuote.toLowerCase().includes(surname) && EMBEZZLE_RE.test(c.sourceQuote));
+    (c.type === 'communication' || c.type === 'assertion') &&
+    c.sourceQuote.toLowerCase().includes(surname) &&
+    EMBEZZLE_RE.test(c.sourceQuote));
   if (accusations.length) {
     motive += 15;
-    add('motive', 15, `Named by the victim in a financial-crime allegation: "${accusations[0].sourceQuote.slice(0, 90)}"`, accusations.map((c) => c.evidenceId), accusations.map((c) => c.claimId));
+    add('motive', 15, `Named in financial or illicit allegations: "${accusations[0].sourceQuote.slice(0, 90)}"`, accusations.map((c) => c.evidenceId), accusations.map((c) => c.claimId));
   }
   const exposure = store.claims.filter((c) =>
-    victim && c.speakerEntityId === victim.entityId && c.type === 'communication' && EXPOSURE_RE.test(c.sourceQuote));
+    c.sourceQuote.toLowerCase().includes(surname) && EXPOSURE_RE.test(c.sourceQuote));
   if (accusations.length && exposure.length) {
     motive += 10;
-    add('motive', 10, `The victim was preparing to expose the crime to authorities: "${exposure[0].sourceQuote.slice(0, 90)}"`, exposure.map((c) => c.evidenceId), exposure.map((c) => c.claimId));
+    add('motive', 10, `Subject of impending regulatory exposure or investigation: "${exposure[0].sourceQuote.slice(0, 90)}"`, exposure.map((c) => c.evidenceId), exposure.map((c) => c.claimId));
   }
   const reframe = store.contradictions.filter((c) => c.kind === 'motive_reframe' && c.asserterEntityId === p.entityId);
   if (reframe.length) {
     motive += 5;
-    add('motive', 5, 'Actively mischaracterized the victim\'s actions to invent a rival motive (see contradictions)', reframe.flatMap((c) => c.evidence));
+    add('motive', 5, 'Actively mischaracterized events or motives in witness statements', reframe.flatMap((c) => c.evidence));
   }
   motive = Math.min(W.MOTIVE_MAX, motive);
 

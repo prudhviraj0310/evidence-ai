@@ -1,0 +1,15 @@
+SWORN DEPOSITION - PORT POLICE AUTHORITY
+Date: December 02, 2026
+Subject: Raymond Vance, Shift Supervisor Terminal 4
+
+INVESTIGATOR: Mr. Vance, describe the security protocol for Container Yard B during the overnight shift of December 01.
+
+VANCE: High-value cargo containers are locked under customs seal #9901. All outer access gates are secured at 22:00 PM. No truck or transporter is authorized past Gate 4 without a verified customs manifest and my direct signature.
+
+INVESTIGATOR: Was any container accessed or removed between midnight and 05:00 AM?
+
+VANCE: Absolutely none. I personally monitored the gate logs from the operations tower. Not a single transporter entered or exited. The yard was 100% locked down.
+
+INVESTIGATOR: Can you explain how Container #MSKU-889104 (containing $4.2M in specialized semiconductors) was found empty this morning with the customs seals clipped?
+
+VANCE: It must have been compromised before arriving at our terminal. The cargo was stolen at sea or at the previous port of call. No one entered Terminal 4 on my watch.

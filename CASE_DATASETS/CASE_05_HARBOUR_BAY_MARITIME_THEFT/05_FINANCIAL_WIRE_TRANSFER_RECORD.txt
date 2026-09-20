@@ -1,0 +1,13 @@
+FINANCIAL CRIMES ENFORCEMENT NETWORK (FinCEN) SUBPOENA RETURN
+Subject: Raymond Vance (Account #CH-8801-4491)
+Bank: Banque Privée Lémanique, Geneva / Zurich
+Date: December 02, 2026
+
+[04:15:00] INCOMING INTERNATIONAL WIRE TRANSFER:
+Amount: $350,000.00 USD
+Originator: Poseidon Logistics Ltd (Tortola, British Virgin Islands)
+Intermediary: Deutsche Bank AG, Frankfurt
+Beneficiary: Raymond Vance (Zurich Private Wealth Account)
+Routing Reference: REF#PL-99201-SEMI-CARGO
+
+INVESTIGATOR NOTE: Transfer executed at 04:15 AM, exactly 34 minutes after the unmanifested transporter exited Terminal 4 with Container #MSKU-889104.

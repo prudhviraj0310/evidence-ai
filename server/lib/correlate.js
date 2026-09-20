@@ -357,8 +357,16 @@ function locationsMatch(a, b) {
   return shared >= 1 && (ta.size <= 2 || tb.size <= 2 || shared >= 2);
 }
 function anchorDateOf(store) {
-  const withDate = store.claims.find((c) => c.tISO);
-  return withDate ? withDate.tISO.slice(0, 10) : '2026-01-01';
+  const dates = {};
+  for (const c of store.claims) {
+    if (c.tISO && c.tISO.length >= 10) {
+      const day = c.tISO.slice(0, 10);
+      dates[day] = (dates[day] || 0) + 1;
+    }
+  }
+  const sorted = Object.entries(dates).sort((a, b) => b[1] - a[1]);
+  const realDate = sorted.find(([day]) => day !== '2026-01-01');
+  return realDate ? realDate[0] : (sorted[0] ? sorted[0][0] : '2026-01-01');
 }
 function truncate(s, n) { return s.length > n ? s.slice(0, n - 1) + '…' : s; }
 

@@ -7,12 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node server/test/golden.test.js",
+    "server": "node server/index.js"
   },
   "dependencies": {
     "@xyflow/react": "^12.10.2",
     "axios": "^1.16.1",
     "framer-motion": "^12.38.0",
+    "gsap": "^3.15.0",
     "lucide-react": "^1.14.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",

@@ -1,0 +1,9 @@
+VEHICLE GPS TELEMETRY - SECURITY VAN (UNIT 44)
+Date: November 04, 2026
+
+[01:05:00] GPS Location: 400 Financial Plaza (Speed: 12 mph)
+[01:12:00] GPS Location: Metropolitan Trust Sub-Basement Loading Dock (Speed: 0 mph) - Engine Off.
+[02:48:00] GPS Location: Metropolitan Trust Sub-Basement Loading Dock (Speed: 10 mph) - Engine Started.
+[03:15:20] GPS Location: Pier 42 Industrial Container Yard (Speed: 0 mph) - Cargo Bay Opened.
+[03:45:00] GPS Location: Pier 42 Industrial Container Yard (Speed: 0 mph) - Cargo Bay Closed.
+[04:20:00] GPS Location: Abandoned Warehouse District, Bay 7 (Speed: 0 mph) - Vehicle Abandoned.

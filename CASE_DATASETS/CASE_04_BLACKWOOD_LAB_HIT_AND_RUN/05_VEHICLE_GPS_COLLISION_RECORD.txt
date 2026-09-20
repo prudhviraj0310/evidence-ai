@@ -1,0 +1,11 @@
+VEHICLE TELEMETRY & IMPACT SENSOR LOG - DR. CHEN COMPANY VEHICLE (PLATE: BC-4401)
+Date: August 11, 2026
+
+[22:10:00] GPS Location: Route 4 Westbound (Speed: 68 mph)
+[22:38:15] GPS Location: Turning onto Oakwood Avenue (Speed: 35 mph)
+[22:44:50] GPS Location: Approaching 1400 Oakwood Ave / Blackwood Lab (Speed: 44 mph - Accelerating)
+[22:45:02] EVENT TRIGGER: High-G Frontal Impact Sensor Tripped (Impact Force: 4.8G)
+[22:45:05] EVENT TRIGGER: Rapid Acceleration (Speed: 62 mph) - Leaving Scene.
+[23:10:00] GPS Location: Private Garage, 44 Saddle River Road (Speed: 0 mph) - Engine Terminated.
+
+Investigator Note: Dr. Victoria Chen stated under oath that her vehicle remained in the corporate parking facility in New Jersey and that she was at the Grand Hyatt in Manhattan at 22:45 PM.

@@ -21,9 +21,11 @@ server/uploads/
 server/data/
 server/cache/
 SCANNED_RESULTS/
+scratch/
 
 # Raw IEEE VAST download (51MB — regenerate: see server/tools/convert-vast.js)
 benchmark_data/
+REAL_INVESTIGATION_DATASETS/02_IEEE_VAST_2024_OCEANUS_WILDLIFE_CRIME/01_ENTITY_TRANSACTION_NETWORK_132MB.json
 
 # Editor directories and files
 .vscode/*

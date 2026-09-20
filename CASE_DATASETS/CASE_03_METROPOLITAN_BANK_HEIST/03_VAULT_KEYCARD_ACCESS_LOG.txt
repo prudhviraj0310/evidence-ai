@@ -1,0 +1,14 @@
+METROPOLITAN TRUST - SECURITY ACCESS CONTROL LOG
+Location: Sub-Basement Vault Level 3
+Date: November 03, 2026 - November 04, 2026
+
+[23:15:00] SENSOR: Perimeter Beam 04 Armed
+[01:12:45] KEYCARD: Master Override #4409 (Registered: Donald Mercer) - Dock Door 2 UNLOCKED
+[01:14:20] SENSOR: Vehicle Entry Detected (Gross Weight: 3.4 Tons)
+[01:28:10] KEYCARD: Master Override #4409 (Registered: Donald Mercer) - Vault Ante-Chamber UNLOCKED
+[01:30:00] SENSOR: Thermal Alarm B-02 Status: BYPASS ENGAGED (Cypher Auth #DM-771)
+[02:45:10] KEYCARD: Master Override #4409 (Registered: Donald Mercer) - Vault Door SECURED
+[02:48:30] SENSOR: Vehicle Exit Detected (Gross Weight: 4.8 Tons)
+[02:50:00] SENSOR: Perimeter Beam 04 Restored
+
+Investigator Note: Donald Mercer claimed under oath that he was asleep at the St. Regis Resort in Aspen during this entire four-hour window.
