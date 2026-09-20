@@ -190,6 +190,26 @@ GEMINI_API_KEY=your_gemini_api_key_here
 ```
 > **Note**: An API key is strictly optional. The entire forensic engine, ML pipeline, parsers, and UI operate with 100% fidelity completely offline.
 
+### 3. Deploy to Render (Production Ready)
+
+The repository includes a [`render.yaml`](file:///Users/prudhviraj/Downloads/evidence-ai/render.yaml) Blueprint for automated zero-config hosting:
+
+**Option A: 1-Click Blueprint (Recommended)**
+1. In the [Render Dashboard](https://dashboard.render.com/), click **New +** → **Blueprint**.
+2. Connect your GitHub repository (`prudhviraj0310/evidence-ai`).
+3. Render reads `render.yaml` and applies all build/start/env configurations automatically.
+4. Click **Apply**.
+
+**Option B: Manual Web Service Setup**
+* **Runtime**: `Node`
+* **Build Command**: `npm run render-build`
+* **Start Command**: `npm start`
+* **Health Check Path**: `/api/health`
+* **Environment Variables**:
+  * `NODE_ENV` = `production`
+  * `EVIDENCE_MODE` = `auto`
+  * `GEMINI_API_KEY` = *(Optional — engine operates offline if omitted)*
+
 ---
 
 ## 🧪 Automated Testing & Verification

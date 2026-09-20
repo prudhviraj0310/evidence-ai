@@ -37,6 +37,11 @@ const UPLOADS_DIR = path.join(__dirname, 'uploads');
 if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 app.use('/api/media', express.static(UPLOADS_DIR));
 
+const DIST_DIR = path.join(__dirname, '../dist');
+if (fs.existsSync(DIST_DIR)) {
+  app.use(express.static(DIST_DIR));
+}
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, UPLOADS_DIR),
   filename: (req, file, cb) => {
@@ -763,6 +768,14 @@ app.post('/api/reset', (req, res) => {
   bus.emit('SYSTEM', 'Case reset — store cleared and persisted');
   res.json({ success: true });
 });
+
+// SPA client-side routing fallback: serve built index.html for non-API GET requests
+if (fs.existsSync(DIST_DIR)) {
+  app.get('/{*path}', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    res.sendFile(path.join(DIST_DIR, 'index.html'));
+  });
+}
 
 // Error middleware: the frontend always gets the {success:false,error} shape.
 app.use((err, req, res, next) => {

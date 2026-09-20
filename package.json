@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm --prefix server install",
+    "render-build": "npm install && npm --prefix server install && npm run build",
+    "start": "node server/index.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "node server/test/golden.test.js",
